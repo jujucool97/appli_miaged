@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Julien\\Documents\\Cours_fac_M2\\Dev. Mobile\\MIAGED\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sv\\values-sv.xml",
+            "outputFile": "C:\\Users\\Julien\\Documents\\Github\\appli_miaged\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sv\\values-sv.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Julien\\.gradle\\caches\\transforms-2\\files-2.1\\e83d09521d980d162621e88e596cf3a9\\jetified-play-services-basement-17.1.0\\res\\values-sv\\values.xml",

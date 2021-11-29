@@ -1,25 +1,8 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Julien\\Documents\\Cours_fac_M2\\Dev. Mobile\\MIAGED\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+            "outputFile": "C:\\Users\\Julien\\Documents\\Github\\appli_miaged\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
             "map": [
-                {
-                    "source": "C:\\Users\\Julien\\Documents\\Cours_fac_M2\\Dev. Mobile\\MIAGED\\build\\app\\generated\\res\\google-services\\debug\\values\\values.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "55,199,281,385,494,614,710",
-                        "endColumns": "143,81,103,108,119,95,72",
-                        "endOffsets": "194,276,380,489,609,705,778"
-                    },
-                    "to": {
-                        "startLines": "111,112,113,114,115,116,117",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "8183,8327,8409,8513,8622,8742,8838",
-                        "endColumns": "143,81,103,108,119,95,72",
-                        "endOffsets": "8322,8404,8508,8617,8737,8833,8906"
-                    }
-                },
                 {
                     "source": "C:\\Users\\Julien\\.gradle\\caches\\transforms-2\\files-2.1\\a02e589245f990ddcd064f577406e084\\browser-1.0.0\\res\\values\\values.xml",
                     "from": {
@@ -93,6 +76,42 @@
                     }
                 },
                 {
+                    "source": "C:\\Users\\Julien\\Documents\\Github\\appli_miaged\\android\\app\\src\\main\\res\\values\\styles.xml",
+                    "from": {
+                        "startLines": "3,14",
+                        "startColumns": "4,4",
+                        "startOffsets": "176,830",
+                        "endLines": "7,16",
+                        "endColumns": "12,12",
+                        "endOffsets": "472,996"
+                    },
+                    "to": {
+                        "startLines": "119,124",
+                        "startColumns": "4,4",
+                        "startOffsets": "8982,9279",
+                        "endLines": "123,126",
+                        "endColumns": "12,12",
+                        "endOffsets": "9274,9443"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Julien\\Documents\\Github\\appli_miaged\\build\\app\\generated\\res\\google-services\\debug\\values\\values.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "55,199,281,385,494,614,710",
+                        "endColumns": "143,81,103,108,119,95,72",
+                        "endOffsets": "194,276,380,489,609,705,778"
+                    },
+                    "to": {
+                        "startLines": "111,112,113,114,115,116,117",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "8183,8327,8409,8513,8622,8742,8838",
+                        "endColumns": "143,81,103,108,119,95,72",
+                        "endOffsets": "8322,8404,8508,8617,8737,8833,8906"
+                    }
+                },
+                {
                     "source": "C:\\Users\\Julien\\.gradle\\caches\\transforms-2\\files-2.1\\7909bc21df339f474940953ce795bf0b\\coordinatorlayout-1.0.0\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,102,3,13",
@@ -109,25 +128,6 @@
                         "endLines": "2,142,159,248",
                         "endColumns": "60,12,24,24",
                         "endOffsets": "161,10485,11391,16602"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Julien\\Documents\\Cours_fac_M2\\Dev. Mobile\\MIAGED\\android\\app\\src\\main\\res\\values\\styles.xml",
-                    "from": {
-                        "startLines": "3,14",
-                        "startColumns": "4,4",
-                        "startOffsets": "176,830",
-                        "endLines": "7,16",
-                        "endColumns": "12,12",
-                        "endOffsets": "472,996"
-                    },
-                    "to": {
-                        "startLines": "119,124",
-                        "startColumns": "4,4",
-                        "startOffsets": "8982,9279",
-                        "endLines": "123,126",
-                        "endColumns": "12,12",
-                        "endOffsets": "9274,9443"
                     }
                 }
             ]
