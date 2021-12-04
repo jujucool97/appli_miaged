@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:miaged/main.dart';
 
 class Boutique extends StatefulWidget {
   const Boutique({Key? key}) : super(key: key);
@@ -12,7 +13,7 @@ class Boutique extends StatefulWidget {
 class _BoutiqueState extends State<Boutique> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
         body: ListeProduit());
   }
   }
@@ -48,7 +49,7 @@ class _ListeProduitState extends State<ListeProduit> {
       future: getPost(),
         builder: (_, AsyncSnapshot snapshot){
       if (snapshot.connectionState ==  ConnectionState.waiting){
-        return Center(
+        return const Center(
           child: Text("Chargement"),
         );
       } else {
@@ -57,12 +58,10 @@ class _ListeProduitState extends State<ListeProduit> {
             itemBuilder: (_,index){
               return ListTile(
                 title: Image.network(snapshot.data[index]["image"]),
+                  subtitle: Text(snapshot.data[index]['nom']),
                 onTap: () => NavToDetail(snapshot.data[index]),
-
               );
-
             });
-
       }
     });
   }
@@ -87,7 +86,15 @@ class _DetailState extends State<Detail> {
           children: [
             Image.network(widget.post['image']),
             Text("Article : " + widget.post['nom']),
-            Text("Prix : " + widget.post['prix'].toString())
+            Text("Taille : " + widget.post['taille']),
+            Text("Marque : " + widget.post['marque']),
+            Text("Prix : " + widget.post['prix'].toString()),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).pushNamed('/retour');
+              },
+              child: const Text('Retour'),
+            ),
           ],
         ),
       ),

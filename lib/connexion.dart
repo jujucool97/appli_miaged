@@ -30,7 +30,7 @@ class _connexionState extends State<connexion> {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('BottomNavigationBar'),
+        title: const Text('MIAGED'),
       ),
       body: Center(
         child: _pages.elementAt(_selectedIndex),

@@ -11,7 +11,7 @@ import 'haut.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 
@@ -25,6 +25,8 @@ class MyApp extends StatelessWidget {
         home: const miaged(),
         routes: <String, WidgetBuilder>{
           '/login': (BuildContext context) => const connexion(),
+          '/deco' : (BuildContext context) => const miaged(),
+          '/retour' : (BuildContext context) => const Boutique(),
         });
   }
 }
