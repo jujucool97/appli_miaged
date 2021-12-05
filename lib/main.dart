@@ -1,8 +1,11 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:miaged/connexion.dart';
 import 'package:flutter/services.dart';
+import 'package:miaged/erreur.dart';
 import 'package:provider/provider.dart';
 
 import 'boutique.dart';
@@ -27,6 +30,7 @@ class MyApp extends StatelessWidget {
           '/login': (BuildContext context) => const connexion(),
           '/deco' : (BuildContext context) => const miaged(),
           '/retour' : (BuildContext context) => const Boutique(),
+          '/erreur' : (BuildContext context) => const erreurLogin(),
         });
   }
 }
@@ -49,10 +53,19 @@ class _miagedState extends State<miaged> {
         .doc(login)
         .get()
         .then((DocumentSnapshot docSnapshot) {
+          if (docSnapshot['login'] == login){
+            result = true;
+            log("login true");
+          } else {
+            result = false;
+            log("login false");
+          }
       if (docSnapshot['password'] == pass) {
         result = true;
+        log("pass true");
       } else {
         result = false;
+        log("pass false");
       }
     });
   }
@@ -106,6 +119,9 @@ class _miagedState extends State<miaged> {
                       padding: const EdgeInsets.symmetric(vertical: 16.0),
                       child: ElevatedButton(
                         onPressed: () {
+                          /*if (result == false){
+                            Navigator.of(context).pushNamed('/erreur');
+                          }*/
                           // Validate returns true if the form is valid, or false otherwise.
                           if (_formKey.currentState!.validate()) {
                             verif_user(myController.text, myController2.text)
