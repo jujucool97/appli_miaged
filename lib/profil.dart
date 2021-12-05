@@ -82,7 +82,7 @@ class _profilState extends State<profil> {
                           },
                           child: const Text('Se déconnecter'),
                         ),
-                      )
+                      ),
                     ],
                   ),
                 ));

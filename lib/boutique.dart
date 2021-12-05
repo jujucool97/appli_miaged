@@ -15,10 +15,8 @@ class _BoutiqueState extends State<Boutique> {
   Widget build(BuildContext context) {
     return const Scaffold(
         body: ListeProduit());
+}
   }
-  }
-
-
 
 class ListeProduit extends StatefulWidget {
   const ListeProduit({Key? key}) : super(key: key);
@@ -40,7 +38,7 @@ class _ListeProduitState extends State<ListeProduit> {
   }
 
   NavToDetail(DocumentSnapshot post){
-    Navigator.push(context, MaterialPageRoute(builder: (context) => Detail(post: post,)));
+    Navigator.push(context, MaterialPageRoute(builder: (context) => Detail(post: post)));
   }
 
   @override
@@ -58,7 +56,13 @@ class _ListeProduitState extends State<ListeProduit> {
             itemBuilder: (_,index){
               return ListTile(
                 title: Image.network(snapshot.data[index]["image"]),
-                  subtitle: Text(snapshot.data[index]['nom']),
+                subtitle: Column(
+                  children: [
+                    Text(snapshot.data[index]['nom']),
+                    Text(snapshot.data[index]['taille']),
+                    Text(snapshot.data[index]['prix']),
+                  ],
+                ),
                 onTap: () => NavToDetail(snapshot.data[index]),
               );
             });
@@ -88,12 +92,21 @@ class _DetailState extends State<Detail> {
             Text("Article : " + widget.post['nom']),
             Text("Taille : " + widget.post['taille']),
             Text("Marque : " + widget.post['marque']),
-            Text("Prix : " + widget.post['prix'].toString()),
+            Text("Prix : " + widget.post['prix']),
             ElevatedButton(
               onPressed: () {
                 Navigator.of(context).pushNamed('/retour');
               },
               child: const Text('Retour'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(
+                      content: Text('Article ajouté au panier')),
+                );
+              },
+              child: const Text('Ajouter au panier'),
             ),
           ],
         ),
