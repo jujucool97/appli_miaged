@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:miaged/bas.dart';
 import 'package:miaged/boutique.dart';
+import 'package:miaged/haut.dart';
 import 'package:miaged/panier.dart';
 import 'package:miaged/profil.dart';
 
@@ -24,7 +26,7 @@ class _connexionState extends State<connexion> {
 
     const List<Widget> _pages = <Widget>[
       panier(),
-      Boutique(),
+      tabar(),
       profil(),
     ];
 
@@ -58,3 +60,49 @@ class _connexionState extends State<connexion> {
     );
   }
 }
+
+class tabar extends StatefulWidget {
+  const tabar({Key? key}) : super(key: key);
+
+  @override
+  _tabarState createState() => _tabarState();
+}
+
+class _tabarState extends State<tabar> {
+  @override
+  Widget build(BuildContext context) {
+    return DefaultTabController(
+      length: 3,
+      child: Scaffold(
+        appBar: AppBar(
+          flexibleSpace: Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: const [
+              TabBar(
+                tabs: [
+                  Tab(
+                    text: 'Tout',
+                  ),
+                  Tab(
+                    text: 'Tee-shirt',
+                  ),
+                  Tab(
+                    text: 'Jeans',
+                  ),
+                ],
+              )
+            ],
+          ),
+        ),
+        body: const TabBarView(
+          children: [
+            Boutique(),
+            haut(),
+            bas(),
+          ],
+        ),
+      ),
+    );
+  }
+}
+

@@ -1,7 +1,10 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:miaged/bas.dart';
+import 'package:miaged/haut.dart';
 import 'package:miaged/main.dart';
+import 'package:miaged/sport.dart';
 
 class Boutique extends StatefulWidget {
   const Boutique({Key? key}) : super(key: key);

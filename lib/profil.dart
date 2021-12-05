@@ -16,6 +16,7 @@ class profil extends StatefulWidget {
 
 class _profilState extends State<profil> {
 
+
   Future getPost() async {
     await Firebase.initializeApp();
     var firestore = FirebaseFirestore.instance;
@@ -39,6 +40,11 @@ class _profilState extends State<profil> {
             );
           } else {
             return Scaffold(
+              floatingActionButton: FloatingActionButton.extended (
+                elevation: 4.0,
+                label: const Text('Valider'),
+                onPressed: () {},
+              ),
                 body: Form(
                   key: _formKey,
                   child: Column(
